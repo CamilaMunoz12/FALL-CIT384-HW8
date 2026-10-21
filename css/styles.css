@@ -1,0 +1,115 @@
+/* Color Palette
+# - color 1
+#F8FAF7 - Soft White (Work Experience)
+# - color 2
+#DCE5DD - Muted Sage (Header)
+# - color 3
+#EDF2ED - Light Sage (Education)
+# - color 4
+#43584D - Deep Sage (Footer and Text)
+*/
+
+/* Global styles 
+------------------------------------*/
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    background: #FFFFFF;
+    color: #43584D;
+    font-family: "DM Sans", Verdana, sans-serif;
+    margin: 0;
+    line-height: 1.6;
+}
+.content-wrap{
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 50px;
+    overflow: hidden;
+}
+
+main section {
+    padding: 25px;
+}
+
+h1, h2, h3 {
+    color: #43584D;
+    font-family: "Libre Baskerville", Georgia, serif;
+}
+h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin-top: 0;
+}
+
+h3 {
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+/* Header & Footer 
+------------------------------------*/
+header {
+    background: #DCE5DD;
+    color: #43584D;
+    padding: 30px;
+    text-align: center;
+}
+
+header h1, header h2 {
+    color: #43584D;
+    margin: 0;
+}
+
+.profile-img {
+    width: 300px;
+    border-radius: 50%;
+    float: left;
+    margin-right: 30px;
+}
+
+footer {
+    background: #43584D;
+    color: #FFFFFF;
+    padding: 20px;
+    text-align: center;
+}
+
+footer h2 {
+    color: #FFFFFF;
+}
+
+footer a {
+    color: #FFFFFF;
+}
+
+footer a:hover {
+    color: #DCE5DD;
+}
+.contact-info a{
+    padding: 10px;
+    display: inline-block;
+}
+
+
+/* Work Experience
+------------------------------------*/
+.work-experience {
+    background: #F8FAF7;
+}
+
+
+/* Education
+------------------------------------*/
+.education {
+    background: #EDF2ED;
+}

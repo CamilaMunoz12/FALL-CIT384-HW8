@@ -1,115 +1,233 @@
+CSS
 /* Color Palette
-# - color 1
-#F8FAF7 - Soft White (Work Experience)
-# - color 2
-#DCE5DD - Muted Sage (Header)
-# - color 3
-#EDF2ED - Light Sage (Education)
-# - color 4
-#43584D - Deep Sage (Footer and Text)
+#F8FAF7 - Soft White
+#DCE5DD - Muted Sage
+#EDF2ED - Light Sage
+#43584D - Deep Sage
 */
-
-/* Global styles 
+/* Global Styles
 ------------------------------------*/
 html {
-    box-sizing: border-box;
+box-sizing: border-box;
+scroll-behavior: smooth;
 }
-
 *, *:before, *:after {
-    box-sizing: inherit;
+box-sizing: inherit;
 }
 body {
-    background: #FFFFFF;
-    color: #43584D;
-    font-family: "DM Sans", Verdana, sans-serif;
-    margin: 0;
-    line-height: 1.6;
+margin: 0;
+padding-top: 65px;
+background: #ffffff;
+color: #43584D;
+font-family: "DM Sans", Verdana, sans-serif;
+line-height: 1.7;
 }
-.content-wrap{
-    max-width: 950px;
-    margin: 0 auto;
-    padding: 50px;
-    overflow: hidden;
+.content-wrap {
+max-width: 1100px;
+margin: 0 auto;
+padding: 60px 40px;
 }
-
 main section {
-    padding: 25px;
+padding: 30px 0;
 }
-
-h1, h2, h3 {
-    color: #43584D;
-    font-family: "Libre Baskerville", Georgia, serif;
+h1,
+h2,
+h3 {
+font-family: "Libre Baskerville", Georgia, serif;
+color: #43584D;
 }
 h1 {
-    font-size: 2.8rem;
-    font-weight: 700;
+font-size: 3rem;
+margin-bottom: 10px;
 }
-
 h2 {
-    font-size: 1.6rem;
-    font-weight: 400;
-    margin-top: 0;
+font-size: 1.6rem;
+margin-top: 0;
 }
-
 h3 {
-    font-size: 1.2rem;
-    font-weight: 400;
+font-size: 1.2rem;
 }
-
-/* Header & Footer 
+p {
+margin-bottom: 15px;
+}
+/* Navigation
+------------------------------------*/
+nav {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+background: #43584D;
+text-align: center;
+z-index: 1000;
+box-shadow: 0 2px 8px rgba(0,0,0,.15);
+}
+nav a {
+display: inline-block;
+color: white;
+text-decoration: none;
+padding: 20px 12px;
+transition: .3s;
+}
+nav a:hover {
+background: #DCE5DD;
+color: #43584D;
+}
+nav i {
+margin-right: 5px;
+}
+/* Scroll Offset
+------------------------------------*/
+header,
+section,
+footer {
+scroll-margin-top: 90px;
+}
+/* Header / Intro
 ------------------------------------*/
 header {
-    background: #DCE5DD;
-    color: #43584D;
-    padding: 30px;
-    text-align: center;
+background: linear-gradient(
+rgba(220,229,221,.95),
+rgba(237,242,237,.95)
+);
 }
-
-header h1, header h2 {
-    color: #43584D;
-    margin: 0;
+header .content-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
 }
-
 .profile-img {
-    width: 300px;
-    border-radius: 50%;
-    float: left;
-    margin-right: 30px;
+width: 260px;
+height: 260px;
+border-radius: 50%;
+object-fit: cover;
+flex-shrink: 0;
+box-shadow: 0 8px 25px rgba(0,0,0,.15);
 }
-
-footer {
-    background: #43584D;
-    color: #FFFFFF;
-    padding: 20px;
-    text-align: center;
+.column-wide {
+flex: 1;
 }
-
-footer h2 {
-    color: #FFFFFF;
+.column-wide h1 {
+margin-top: 0;
 }
-
-footer a {
-    color: #FFFFFF;
+.column-wide h2 {
+margin-bottom: 20px;
 }
-
-footer a:hover {
-    color: #DCE5DD;
+.column-wide p {
+max-width: 600px;
 }
-.contact-info a{
-    padding: 10px;
-    display: inline-block;
-}
-
-
 /* Work Experience
 ------------------------------------*/
 .work-experience {
-    background: #F8FAF7;
+background: #F8FAF7;
 }
-
-
+.job {
+display: flex;
+gap: 40px;
+margin-bottom: 50px;
+}
+.column-narrow {
+flex: 1;
+min-width: 200px;
+}
+.column-wide {
+flex: 3;
+}
+.job ul {
+padding-left: 20px;
+}
 /* Education
 ------------------------------------*/
 .education {
-    background: #EDF2ED;
+background:
+linear-gradient(
+rgba(220,229,221,.75),
+rgba(237,242,237,.75)
+),
+url("../images/ITFinance.png");
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+}
+/* Skills
+------------------------------------*/
+.skills {
+background: #F8FAF7;
+}
+.skills ul {
+columns: 2;
+gap: 40px;
+}
+/* Certifications
+------------------------------------*/
+.certifications {
+background: #EDF2ED;
+}
+/* Section Icons
+------------------------------------*/
+section h2 i {
+margin-right: 10px;
+color: #43584D;
+}
+/* Footer
+------------------------------------*/
+footer {
+background: #43584D;
+color: white;
+text-align: center;
+}
+footer h2 {
+color: white;
+}
+footer a {
+color: white;
+text-decoration: none;
+}
+footer a:hover {
+color: #DCE5DD;
+}
+.contact-info a {
+display: inline-block;
+padding: 10px 15px;
+}
+.contact-info i {
+margin-right: 8px;
+font-size: 20px;
+}
+/* Responsive Design
+------------------------------------*/
+@media (max-width: 850px) {
+body {
+padding-top: 0;
+}
+nav {
+position: sticky;
+top: 0;
+}
+nav a {
+font-size: 12px;
+padding: 12px 8px;
+}
+header .content-wrap {
+flex-direction: column;
+text-align: center;
+}
+.profile-img {
+width: 380px;
+height: 380px;
+}
+.job {
+flex-direction: column;
+gap: 10px;
+}
+.skills ul {
+columns: 1;
+}
+.content-wrap {
+padding: 30px 20px;
+}
+h1 {
+font-size: 2.3rem;
+}
 }
